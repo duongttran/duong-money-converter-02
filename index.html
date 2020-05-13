@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 
 
     <!-- Bootstrap CSS -->
@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center header">
                 <h1>
                     Currency Converter
                 </h1>
@@ -24,54 +24,58 @@
         </div>
     </div>
 
-    <section class="main">
+    <div class="main-bgr">
+        <section class="main">
 
-        <div class="container">
-            <div class="row">
+            <div class="container">
+                <div class="row main-section">
 
-                <div class="col-md-3">
-                    <input type="number" id="amount" />
-                </div>
+                    <div class="col-md-3">
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" class="form-control" />
+                    </div>
 
-                <div class="col-md-3">
-                    <label for="fromCurrency">From:</label>
-                    <form action="">
-                        <input type="radio" name="fromCurrency" value="VND"> VND<br>
-                        <input type="radio" name="fromCurrency" value="USD"> USD<br>
-                        <input type="radio" name="fromCurrency" value="KRW"> KRW<br>
+                    <div class="col-md-3">
+                        <label for="fromCurrency">From:</label>
+                        <form action="">
+                            <input type="radio" name="fromCurrency" value="VND"> VND<br>
+                            <input type="radio" name="fromCurrency" value="USD"> USD<br>
+                            <input type="radio" name="fromCurrency" value="KRW"> KRW<br>
 
-                    </form>
-                </div>
+                        </form>
+                    </div>
 
-                <div class="col-md-3">
-                    <label for="toCurrency">To:</label>
-                    <select id="toCurrency">
-                    <option value="USD">USD</option>
-                    <option value="VND">VND</option>
-                    <option value="KRW">KRW</option>
-                 </select>
-                </div>
+                    <div class="col-md-3">
+                        <label for="toCurrency">To:</label>
+                        <select id="toCurrency">
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                        <option value="KRW">KRW</option>
+                     </select>
+                    </div>
 
-                <div class="col-md-3">
-                    <button id="convertButton">Convert!</button>
-                </div>
+                    <div class="col-md-3">
+                        <button id="convertButton" class="btn btn-primary">Convert!</button>
+                    </div>
 
-            </div>
-        </div>
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-
-                    <span id="resultArea"></span>
                 </div>
             </div>
-        </div>
 
 
-    </section>
+
+            <div class="container">
+                <div class="row resultRow">
+                    <div class="col-md-12">
+                        <p id="resultArea">
+                        </p>
+                        <!-- <img src="https://image.freepik.com/free-vector/profit-from-currency-exchange-services-cartoon-man-sits-screen-large-smartphone_81534-1526.jpg" alt="money exchange"> -->
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
 
     <script src="js/convert.js"></script>
 </body>

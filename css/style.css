@@ -1,9 +1,37 @@
 body {
-    font-family: 'Jost', sans-serif;
     margin: 0;
 }
 
+.header {
+    padding: 3%;
+}
+
 .main {
-    background-color: lightblue;
-    padding: 5%;
+    background-image: url(https://blog.clsrecruitment.ie/wp-content/uploads/2014/05/travel-money-banner.jpg);
+    /* background-image: url(https://image.freepik.com/free-vector/profit-from-currency-exchange-services-cartoon-man-sits-screen-large-smartphone_81534-1526.jpg); */
+    /* background-image: url(https://www.playadelcarmen.org/wp-content/gallery/money-exchange-in-mexico/mexican-bills.jpg); */
+    mix-blend-mode: multiply;
+    background-position-x: 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-bgr {
+    background-color: #f5f5f5;
+}
+
+.main-section {
+    padding: 2%;
+    min-height: 140px;
+}
+
+.resultRow {
+    padding: 2%;
+}
+
+#resultArea {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    height: 40px;
 }
