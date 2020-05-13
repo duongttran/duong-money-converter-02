@@ -6,7 +6,26 @@ convertButton.addEventListener("click", convert);
 
 let moneyResult = document.getElementById("resultArea");
 
-
+const currencyRatio = {
+    vnd: {
+        usd: 0.000043,
+        krw: 0.051,
+        eur: 0.000039,
+        vnd: 1
+    },
+    usd: {
+        usd: 1,
+        krw: 1193.27,
+        eur: 0.9,
+        vnd: 23235.5
+    },
+    krw: {
+        usd: 0.00084,
+        krw: 1,
+        eur: 0.00075,
+        vnd: 19.47
+    }
+};
 
 // VND to USD
 function vndToUsd() {
@@ -35,6 +54,20 @@ function vndToKrw() {
 function krwToVnd() {
     let result = amountInput.value;
     let convertedAmount = result * 19000;
+    return convertedAmount;
+}
+
+// USD to KWR
+function usdToKrw() {
+    let result = amountInput.value;
+    let convertedAmount = result * 1226;
+    return convertedAmount;
+}
+
+// KRW to USD
+function krwToUsd() {
+    let result = amountInput.value;
+    let convertedAmount = result / 1226;
     return convertedAmount;
 }
 
@@ -71,5 +104,7 @@ function convert() {
         return;
     }
 
-    moneyResult.innerHTML = `${amountInput.value} ${fromCurrency.value} is same amount with ${formatamount}`
+    //moneyResult.innerHTML = `${amountInput.value} ${fromCurrency.value} is same amount with ${formatamount}`
+    moneyResult.innerHTML = formatCurrency(fromCurrency.value, amountInput.value) + ` is same amount with ${formatamount}.`
+
 }
